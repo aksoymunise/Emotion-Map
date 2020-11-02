@@ -19,6 +19,9 @@ $(document).ready(function() {
       date: Date()
     }
     
+    if(!Array.isArray(allfeelings)) {
+      allfeelings = [];
+    }
     allfeelings.push(thisfeeling)
     
     shareddatabase.ref("mvkc-log-test").set(allfeelings);
@@ -33,10 +36,26 @@ $(document).ready(function() {
     
     allfeelings = snapshot.val();
     
-    console.log(allfeelings);
+    $("#log").html("")
+
+    for(let i = 0; i < allfeelings.length; i++) {
+      $("#log").append("<div>name: " + allfeelings[i].name + ", feeling: " + allfeelings[i].feeling + ", date:" + allfeelings[i].date + ", </div>")  
+    }
+    
+    
     
   });
   
+  
+    
+  $("#clear").click(function() {
+  
+    
+    shareddatabase.ref("mvkc-log-test").set([]);
+    $("#log").html("")
+  
+    
+  })
   
 
   

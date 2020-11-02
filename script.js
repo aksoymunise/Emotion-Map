@@ -10,6 +10,11 @@ var allfeelings = [];
 $(document).ready(function() {
   
   
+  // try the below with #rotating_img
+  
+  // and instead of storing "feeling", try storing "imgurl" like:
+  // imgurl: $("#rotating_img").attr("src")
+  
   
   $("#submit").click(function() {
   
@@ -40,6 +45,7 @@ $(document).ready(function() {
 
     for(let i = 0; i < allfeelings.length; i++) {
       $("#log").append("<div>name: " + allfeelings[i].name + ", feeling: " + allfeelings[i].feeling + ", date:" + allfeelings[i].date + ", </div>")  
+      $("#log").append("<img src=" + allfeelings[i].feeling + " />");
     }
     
     

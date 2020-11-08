@@ -22,8 +22,9 @@ h1 {
   background-color: transparent;
   color: black;
   border: 5px solid #4CAF50; 
+  border-color: transparent;
  width: 5000px;
-  height:550px;
+  height:580px;
   position: absolute
 }
 

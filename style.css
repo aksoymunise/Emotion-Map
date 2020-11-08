@@ -23,12 +23,13 @@ h1 {
   color: black;
   border: 5px solid #4CAF50; 
   border-color: transparent;
- width: 5000px;
+ width: 1000px;
   height:580px;
   position: absolute
 }
 #clear {
   color:red
+  background-color: red;
   border: 5px solid #4CAF50; 
   border-color:red;
 }

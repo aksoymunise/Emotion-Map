@@ -27,6 +27,11 @@ h1 {
   height:580px;
   position: absolute
 }
+#clear {
+  color:red
+  border: 5px solid #4CAF50; 
+  border-color:red;
+}
 
 input {
   display: block;
@@ -50,7 +55,7 @@ canvas {
 #rotating_img {
   animation: rotation 4s infinite linear;
   animation-fill-mode: forwards;
-  min-width: 50%;
+  min-width: 80%;
   min-height: 50%;
   width: auto;
   height: auto;

@@ -109,7 +109,7 @@ $("#rotating_img").mousemove(function(event) {
     }
     
     if(percY < 0.25) {
-      $("#rotating_img").attr("src", "https://cdn.glitch.com/382670ce-d4da-4b67-8f53-6b74adcef7a4%2F7b4c683c-8556-4377-88f7-27a32769dc4f_image%201.png?v=1604804808635");
+      $("#rotating_img").attr("src", "https://cdn.glitch.com/6b18477b-4556-494b-82d5-5e09a958dae3%2F7b4c683c-8556-4377-88f7-27a32769dc4f_DHS4777_771_0.jpg?v=1603798212278");
     }
     
     

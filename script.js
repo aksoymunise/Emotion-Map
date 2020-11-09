@@ -66,7 +66,13 @@ function createBox(event) {
 
       $("#log").append("<img src=" + allfeelings[i].feeling + " />");
       
-      var box = $("<div class=mousebox>BOX</div>");
+      var box = $("<div class=mousebox></div>");
+      box.text(allfeelings[i].name + " is feeling " + allfeelings[i].feeling )
+      box.css("top", allfeelings[i].mouseY + "px")
+      box.css("left", allfeelings[i].mouseX + "px")
+      var randomColor = "rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")"
+      
+      box.css("background-color", allfeelings[i].feeling)
       $("#mouseboxes").append(box);
     }
     

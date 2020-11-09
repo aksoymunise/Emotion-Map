@@ -16,12 +16,17 @@ $(document).ready(function() {
   // imgurl: $("#rotating_img").attr("src")
   
   
-  $("#submit").click(function() {
+  $(document).click(function(event) {
+    // when we click on the document
   
+    //alert("clicked at " + event.pageX + 'px' + "And " + event.pageY + 'px');
+    
     var thisfeeling = {
       name: $("#nameInput").val(),
       feeling: $("#feelingInput").val(),
-      date: Date()
+      date: Date(),
+      mouseX: event.pageX,
+      mouseY: event.pageY
     }
     
     
@@ -32,11 +37,20 @@ $(document).ready(function() {
     allfeelings.push(thisfeeling)
     
     shareddatabase.ref("mvkc-log-test").set(allfeelings);
-  
     
     
   })
+  /*
+  addEventListener('click', createBox);
 
+function createBox(event) {
+  var box = document.createElement('div');
+  box.className = 'box';
+  box.style.left = event.pageX + 'px';
+  box.style.top = event.pageY + 'px';
+  document.body.appendChild(box);
+}
+*/
 
   // when the database changes, change the website  
   shareddatabase.ref("mvkc-log-test").on("value", function(snapshot) {
@@ -44,10 +58,16 @@ $(document).ready(function() {
     allfeelings = snapshot.val();
     
     $("#log").html("")
+    $("#mouseboxes").html("")
 
     for(let i = 0; i < allfeelings.length; i++) {
       $("#log").append("<div>name: " + allfeelings[i].name + ", feeling: " + allfeelings[i].feeling + ", date:" + allfeelings[i].date + ", </div>")  
+        $("#log").append("<div>mouseX: " + allfeelings[i].mouseX + ", mouseY: " + allfeelings[i].mouseY + ", </div>")  
+
       $("#log").append("<img src=" + allfeelings[i].feeling + " />");
+      
+      var box = $("<div class=mousebox>BOX</div>");
+      $("#mouseboxes").append(box);
     }
     
     
@@ -112,13 +132,22 @@ $("#rotating_img").mousemove(function(event) {
       $("#rotating_img").attr("src", "https://cdn.glitch.com/6b18477b-4556-494b-82d5-5e09a958dae3%2F7b4c683c-8556-4377-88f7-27a32769dc4f_DHS4777_771_0.jpg?v=1603798212278");
     }
     
-addEventListener('click', createBox);
 
-function createBox(event) {
-  var box = document.createElement('div');
-  box.className = 'box';
-  box.style.left = event.pageX + 'px';
-  box.style.top = event.pageY + 'px';
-  document.body.appendChild(box);
-}
     });
+
+
+
+/*
+
+what we want:
+we click on the wheel, we get a box, it records the box to the database
+when the databse changes, it redraws the box
+
+
+1. we click on the wheel: we record some data to the database, 
+including the location of the click
+
+2. when the database changes, we make boxes from it
+(the location of the lcick)
+
+*/

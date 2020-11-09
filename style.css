@@ -150,3 +150,7 @@ input {
 #log {
   display: none;
 }
+
+.boximage {
+  width: 100%;
+}

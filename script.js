@@ -6,6 +6,10 @@ var shareddatabase = firebase.database();
 
 var allfeelings = [];
 
+var allfeelingimages = ["https://cdn.glitch.com/bfd388e2-4a35-4af7-9787-692d8f0c6d72%2Fgradient1.jpg?v=1604886485186",
+                       "https://cdn.glitch.com/bfd388e2-4a35-4af7-9787-692d8f0c6d72%2Fgradient2.jpeg?v=1604886485186",
+                       "https://cdn.glitch.com/bfd388e2-4a35-4af7-9787-692d8f0c6d72%2Ffield3.jpg?v=1604886486237"]
+
 
 $(document).ready(function() {
   
@@ -66,11 +70,19 @@ function createBox(event) {
 
       $("#log").append("<img src=" + allfeelings[i].feeling + " />");
       
+      
+      // generate box on mouse
       var box = $("<div class=mousebox></div>");
       box.text(allfeelings[i].name + " is feeling " + allfeelings[i].feeling )
       box.css("top", allfeelings[i].mouseY + "px")
       box.css("left", allfeelings[i].mouseX + "px")
       var randomColor = "rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")"
+      
+      // generate image and put inside of mouse
+      var boximg = $("<img class=boximage>");
+      boximg.attr("src", allfeelingimages[allfeelings[i].feeling])
+      
+      box.append(boximg)
       
       box.css("background-color", allfeelings[i].feeling)
       $("#mouseboxes").append(box);

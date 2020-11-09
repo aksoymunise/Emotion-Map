@@ -78,12 +78,15 @@ function createBox(event) {
       box.css("left", allfeelings[i].mouseX + "px")
       var randomColor = "rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")"
       
+      
       // generate image and put inside of mouse
       var boximg = $("<img class=boximage>");
       boximg.attr("src", allfeelingimages[allfeelings[i].feeling])
       
       box.append(boximg)
       
+            // box.css("background-color", randomColor)
+
       box.css("background-color", allfeelings[i].feeling)
       $("#mouseboxes").append(box);
     }

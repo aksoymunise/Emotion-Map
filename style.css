@@ -3,6 +3,8 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
+    overflow: hidden;
+
 }
 
 h1 {
@@ -139,7 +141,9 @@ input {
   z-index: 1;
 }
 
-
+#img_container {
+ 
+}
 
 .mousebox {
   position: absolute;

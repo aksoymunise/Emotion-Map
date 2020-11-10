@@ -3,15 +3,13 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-    overflow: hidden;
-
+  overflow: hidden;
 }
 
 h1 {
   font-style: italic;
   color: #373fff;
 }
-
 
 .bubble {
   display: inline;
@@ -23,17 +21,19 @@ h1 {
 #submit {
   background-color: transparent;
   color: black;
-  border: 5px solid #4CAF50; 
+  border: 5px solid #4CAF50;
   border-color: transparent;
- width: 1000px;
-  height:580px;
-  position: absolute
+  width: 1000px;
+  height: 580px;
+  position: absolute;
 }
 #clear {
-  color:red
   background-color: red;
-  border: 5px solid #4CAF50; 
-  border-color:red;
+  border: 5px solid #4CAF50;
+  border-color: black;
+  z-index: 10;
+  bottom: 100px;
+  
 }
 
 input {
@@ -54,24 +54,21 @@ canvas {
   top: 200px;
 }
 
-
 #rotating_img {
   animation: rotation 4s infinite linear;
   animation-fill-mode: forwards;
-  min-width: 80%;
+  min-width: 50%;
   min-height: 50%;
   width: auto;
   height: auto;
   z-index: -1;
   position: absolute;
-  margin:auto;
+  margin: auto;
   top: -100%;
-  bottom:-100%;
+  bottom: -100%;
   left: -100%;
-  right:-100%;
-  
+  right: -100%;
 }
-
 
 .box {
   padding: 10px;
@@ -81,7 +78,6 @@ canvas {
   position: absolute;
 }
 
-
 /*.backgroundimage {
   z-index: -1;
 }
@@ -90,9 +86,7 @@ canvas {
   position: absolute;
   width: 100px;
   left: 100px;
-  
 }
-
 
 @keyframes rotation {
   from {
@@ -142,7 +136,6 @@ input {
 }
 
 #img_container {
- 
 }
 
 .mousebox {

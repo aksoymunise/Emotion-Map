@@ -151,3 +151,12 @@ input {
 .boximage {
   width: 100%;
 }
+
+
+#nameInput {
+  z-index: 10;
+}
+
+#feelingInput {
+  z-index: 10;
+}

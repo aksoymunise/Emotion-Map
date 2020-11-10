@@ -10,7 +10,8 @@ var allfeelingimages = ["https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911f
                        "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F3.png?v=1604978114655",
                        "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F4.png?v=1604978117278",
                        "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F2.png?v=1604978112228",
-                       "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2Funnamed.png?v=1604977974111"]
+                       "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2Funnamed.png?v=1604977974111",
+                       "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2Fc08bc58df6c0307982ab0b475c2d5abc.png?v=1604977736803"]
 
 
 $(document).ready(function() {
@@ -75,7 +76,7 @@ function createBox(event) {
       
       // generate box on mouse
       var box = $("<div class=mousebox></div>");
-      box.text(allfeelings[i].name + " is feeling " + allfeelings[i].feeling )
+      box.text(allfeelings[i].name + " is feeling ")
       box.css("top", allfeelings[i].mouseY + "px")
       box.css("left", allfeelings[i].mouseX + "px")
       var randomColor = "rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")"

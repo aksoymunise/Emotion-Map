@@ -83,6 +83,7 @@ function createBox(event) {
       box.text(allfeelings[i].name + " feels ");
       box.css("top", allfeelings[i].mouseY + "px");
       box.css("left", allfeelings[i].mouseX + "px");
+  
       var randomColor =
         "rgb(" +
         Math.random() * 255 +

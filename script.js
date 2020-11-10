@@ -7,8 +7,10 @@ var shareddatabase = firebase.database();
 var allfeelings = [];
 
 var allfeelingimages = ["https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F1.png?v=1604978104046",
-                       "https://cdn.glitch.com/bfd388e2-4a35-4af7-9787-692d8f0c6d72%2Fgradient2.jpeg?v=1604886485186",
-                       "https://cdn.glitch.com/bfd388e2-4a35-4af7-9787-692d8f0c6d72%2Ffield3.jpg?v=1604886486237"]
+                       "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F3.png?v=1604978114655",
+                       "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F4.png?v=1604978117278",
+                       "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F2.png?v=1604978112228",
+                       "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2Funnamed.png?v=1604977974111"]
 
 
 $(document).ready(function() {

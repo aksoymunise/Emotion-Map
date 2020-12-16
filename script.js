@@ -33,7 +33,6 @@ $(document).ready(function() {
     var thisfeeling = {
       name: $("#nameInput").val(),
       feeling: $("#feelingInput").val(),
-      comment: $("#commentInput").val(),
       date: Date(),
       mouseX: event.pageX,
       mouseY: event.pageY
@@ -71,9 +70,7 @@ function createBox(event) {
           allfeelings[i].name +
           ", feeling: " +
           allfeelings[i].feeling +
-          ", comment:" +
-          allfeelings[i].comment +
-          ", date: " +
+          ", date:" +
           allfeelings[i].date +
           ", </div>"
       );
@@ -105,7 +102,6 @@ function createBox(event) {
       // generate image and put inside of mouse
       var boximg = $("<img class=boximage>");
       boximg.attr("src", allfeelingimages[allfeelings[i].feeling]);
-      boximg.attr("src", allfeelingimages[allfeelings[i].comment]);
       
       box.append(boximg);
 
@@ -138,42 +134,6 @@ $("#rotating_img").mousemove(function(event) {
   $("#rotating_img").css("animation-duration", speed);
 });
 
-$(document).mousemove(function(event) {
-  //let's define "percY" as the percentage of the mouse's Y position relative to the screen
-  // if percY is 0, mouse is on top of screen; if percY is 1, mouse is on the bottom.
-  var percY = event.clientY / $(this).height();
-  var percX = event.clientX / $(this).width();
-
-  console.log(percY);
-
-  if (percY > 0.75) {
-    $("#rotating_img").attr(
-      "src",
-      "https://cdn.glitch.com/6b18477b-4556-494b-82d5-5e09a958dae3%2F7b4c683c-8556-4377-88f7-27a32769dc4f_DamienHirst.png?v=1603798212796"
-    );
-  }
-
-  if (percY < 0.75 && percY > 0.5) {
-    $("#rotating_img").attr(
-      "src",
-      "https://cdn.glitch.com/6b18477b-4556-494b-82d5-5e09a958dae3%2F7b4c683c-8556-4377-88f7-27a32769dc4f_DHS674_771_0.jpg?v=1603798212980"
-    );
-  }
-
-  if (percY < 0.5 && percY > 0.25) {
-    $("#rotating_img").attr(
-      "src",
-      "https://cdn.glitch.com/7b4c683c-8556-4377-88f7-27a32769dc4f%2Fimage%201.jpg?v=1603725193856"
-    );
-  }
-
-  if (percY < 0.25) {
-    $("#rotating_img").attr(
-      "src",
-      "https://cdn.glitch.com/6b18477b-4556-494b-82d5-5e09a958dae3%2F7b4c683c-8556-4377-88f7-27a32769dc4f_DHS4777_771_0.jpg?v=1603798212278"
-    );
-  }
-});
 
 /*
 

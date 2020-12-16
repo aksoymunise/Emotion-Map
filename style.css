@@ -55,8 +55,6 @@ canvas {
 }
 
 #rotating_img {
-  animation: rotation 4s infinite linear;
-  animation-fill-mode: forwards;
   min-width: 50%;
   min-height: 50%;
   width: auto;

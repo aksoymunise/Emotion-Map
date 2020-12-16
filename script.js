@@ -6,6 +6,7 @@ var shareddatabase = firebase.database();
 var allfeelings = [];
 
 var allfeelingimages = [
+  "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F3.png?v=1604978114655:",
   "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F01.png?v=1608087631331",
   "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F02.png?v=1608087634959",
   "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F03.png?v=1608087637126",
@@ -32,6 +33,7 @@ $(document).ready(function() {
     var thisfeeling = {
       name: $("#nameInput").val(),
       feeling: $("#feelingInput").val(),
+      comment: $("#commentInput").val(),
       date: Date(),
       mouseX: event.pageX,
       mouseY: event.pageY
@@ -69,7 +71,9 @@ function createBox(event) {
           allfeelings[i].name +
           ", feeling: " +
           allfeelings[i].feeling +
-          ", date:" +
+          ", comment:" +
+          allfeelings[i].comment +
+          ", date: " +
           allfeelings[i].date +
           ", </div>"
       );
@@ -85,7 +89,7 @@ function createBox(event) {
 
       // generate box on mouse
       var box = $("<div class=mousebox></div>");
-      box.text(allfeelings[i].name + " feels ");
+      box.text(allfeelings[i].name + "");
       box.css("top", allfeelings[i].mouseY + "px");
       box.css("left", allfeelings[i].mouseX + "px");
   
@@ -101,7 +105,8 @@ function createBox(event) {
       // generate image and put inside of mouse
       var boximg = $("<img class=boximage>");
       boximg.attr("src", allfeelingimages[allfeelings[i].feeling]);
-
+      boximg.attr("src", allfeelingimages[allfeelings[i].comment]);
+      
       box.append(boximg);
 
       // box.css("background-color", randomColor)
@@ -116,6 +121,12 @@ function createBox(event) {
     $("#log").html("");
   });
 });
+
+
+
+
+
+
 
 $("#rotating_img").mousemove(function(event) {
   var perc = event.clientX / $(this).height();

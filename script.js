@@ -6,11 +6,16 @@ var shareddatabase = firebase.database();
 var allfeelings = [];
 
 var allfeelingimages = [
-  "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F1.png?v=1604978104046",
-  "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F3.png?v=1604978114655",
-  "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F4.png?v=1604978117278",
-  "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2F2.png?v=1604978112228",
-  "https://cdn.glitch.com/d514bf9a-69df-4e74-bbe8-1a83911fde49%2Funnamed.png?v=1604977974111"
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F01.png?v=1608087631331",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F02.png?v=1608087634959",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F03.png?v=1608087637126",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F04.png?v=1608087639615",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F05.png?v=1608087645714",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F06.png?v=1608087647975",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F07.png?v=1608087649952",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F08.png?v=1608087651544",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F09.png?v=1608087653671",
+  "https://cdn.glitch.com/4c4322da-d1eb-44af-bccc-74ec3fff9354%2F10.png?v=1608087655596"
 ];
 
 $(document).ready(function() {

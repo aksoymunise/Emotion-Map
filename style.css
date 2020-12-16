@@ -28,10 +28,12 @@ h1 {
   position: absolute;
 }
 #clear {
-  background-color: red;
-  border: 5px solid #4CAF50;
+  background-color: blue;
+  color: white;
+  border: 1px solid #4CAF50;
   border-color: black;
   z-index: 10;
+  padding: 10px;
   bottom: 100px;
   
 }
@@ -58,7 +60,7 @@ canvas {
   min-width: 50%;
   min-height: 50%;
   width: auto;
-  height: auto;
+  height: 100%;
   z-index: -1;
   position: absolute;
   margin: auto;

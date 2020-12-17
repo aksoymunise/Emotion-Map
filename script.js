@@ -116,6 +116,18 @@ function createBox(event) {
     shareddatabase.ref("mvkc-log-test").set([]);
     $("#log").html("");
   });
+  
+  $("#updateImage").click(function() {
+    alert("update image!")
+    
+    var imageurl = $("#ImageInput").val();
+    
+    // change background using the imageurl
+    
+    alert(imageurl)
+    
+  });
+  
 });
 
 

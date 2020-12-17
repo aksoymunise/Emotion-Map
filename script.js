@@ -126,40 +126,28 @@ function createBox(event) {
     
     $("#rotating_img").attr("src", imageurl);
     
-  
-    /*     
-
-    // this is how you set a shared value
     
     shareddatabase.ref("emoji-deskcrits-background").set({
-      name: $("#nameInput").val()
-    });
-    
-    */
+      name: $("#ImageInput").val()
+    });                       
+                            
+                            
+  
     
     
   });
   
   
-  /*
-    
-  // when the shared value changes in the database, do something
+
+   
   shareddatabase.ref("emoji-deskcrits-background").on("value", function(snapshot) {
-  
     var data = snapshot.val();
     var imageurl = data.name;
-    
+    $("#rotating_img").attr("src", imageurl);
 
-    // TODO: insert code that changes src o
-    console.log( snapshot.val() );
-    
   });
-  
-
-
-*/
-
-  
+                          
+                          
 });
 
 

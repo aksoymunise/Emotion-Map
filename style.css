@@ -39,6 +39,19 @@ h1 {
   
 }
 
+#updateImage {
+  background-color: blue;
+  color: white;
+  border: 1px solid #4CAF50;
+  border-color: black;
+  z-index: 10;
+  padding: 10px;
+  bottom: 100px;
+  position: right;
+  
+}
+
+
 input {
   display: block;
   padding: 5px;

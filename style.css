@@ -158,6 +158,14 @@ input {
   height: 25px;
 }
 
+.txt{
+  top: 110%
+  width: 25px;
+  height: 25px;
+  color:black;
+}
+
+
 #log {
   display: none;
 }

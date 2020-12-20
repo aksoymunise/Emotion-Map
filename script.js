@@ -45,6 +45,8 @@ $(document).ready(function() {
 
     shareddatabase.ref("mvkc-log-test").set(allfeelings);
   });
+  
+
   /*
   addEventListener('click', createBox);
 

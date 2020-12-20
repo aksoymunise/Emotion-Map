@@ -1,64 +1,337 @@
+/* CSS files add styling rules to your content */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
-
- body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: white;
-  height: 100%;
-}
-
-.background-container {
-  position: fixed;
-  top: 0px;
-  pointer-events: none;
-  z-index: -10;
-}
-
-.content-container {
-  z-index: 100;
-	height:100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  flex-direction: column;
-}
-
-.blob-container {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
   overflow: hidden;
 }
 
-.tk-blob {
-  mix-blend-mode: lighten;
-  position: absolute !important;
-  left: 50vw;
-  top: 50vh;
-  margin-left: -35vmin;
-  width: 70vmin;
-  margin-top: -35vmin;
-  height: 70vmin;
-  opacity: 0.8;
+h1 {
+  font-style: italic;
+  color: #373fff;
 }
 
-.title {
-  font-size: 2em;
+.bubble {
+  display: inline;
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: 10px;
 }
 
-.links {
+#submit {
+  background-color: transparent;
+  color: black;
+  border: 5px solid #4CAF50;
+  border-color: transparent;
+  width: 1000px;
+  height: 580px;
+  position: absolute;
+}
+#clear {
+  background-color: blue;
+  color: white;
+  border: 1px solid #4CAF50;
+  border-color: black;
+  z-index: 10;
+  padding: 10px;
+  bottom: 100px;
+  position: right;
+  
+}
+
+#updateImage {
+  background-color: blue;
+  color: white;
+  border: 1px solid #4CAF50;
+  border-color: black;
+  z-index: 10;
+  padding: 10px;
+  bottom: 100px;
+  position: right;
+  
+}
+
+
+input {
   display: block;
+  padding: 5px;
 }
 
-.links a::after {
-  content: " / ";
+#log {
+  width: 300px;
+  height: 500px;
+  border: 1px solid black;
 }
 
-a {
-  color: #44F;
+canvas {
+  position: center;
+  width: 100px;
+  padding: 200px;
+  top: 200px;
+}
+
+#rotating_img {
+  min-width: 50%;
+  min-height: 50%;
+  width: auto;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  margin: auto;
+  top: -100%;
+  bottom: -100%;
+  left: -100%;
+  right: -100%;
+}
+
+.box {
+  padding: 10px;
+  margin-left: -10px;
+  margin-top: -10px;
+  background-color: blue;
+  position: absolute;
+}
+
+/*.backgroundimage {
+  z-index: -1;
+}
+*/
+#mouse {
+  position: absolute;
+  width: 100px;
+  left: 100px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+input {
+  display: block;
+  padding: 5px;
+}
+
+#anim_halfs {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#anim_4s {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#anim_16s {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#img_container {
+}
+
+.mousebox {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    border:5px solid black;
+  top: 20px;
+  right: 20px;
+ transform: scale(.7);
+}
+.center{
+    background-color: #000;
+    position: absolute;
+    left: calc(50% - 10px);
+    top:  calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 20;
+ 
+}
+.hourHand{
+    width: 10px;
+    height: 75px;
+    background-color: #000;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 75px;
+    left: 145px;
+    z-index: 10;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      transform: rotate(360deg);
+
+}
+.minuteHand{
+    width: 5px;
+    height: 120px;
+    background-color: #000;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 30px;
+    left: 147px;
+    z-index: 9;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      transform: rotate(90deg);
+
+}
+.secondHand{
+    width: 2px;
+    height: 120px;
+    background-color:red;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 30px;
+    left: 149px;
+    transition: all 0.06s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    z-index: 8;  
+      transform: rotate(360deg);
+
+}
+.time{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    border: 1px solid #fff8dc;
+    background-color: #fff;
+    padding: 5px;
+    display: block;
+    box-shadow: inset 0px 2px 5px rgba(0,0,0,.4);
+    border-radius: 5px;
+    min-width: 70px;
+    height: 15px;
+
+}
+.time small{
+    color:red;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.clock ul{
+    list-style: none;
+    padding: 0;
+
+}
+.clock ul li{
+    position: absolute;
+    width:20px;
+    height:20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+    color:red;
+}
+.clock ul li:nth-child(1){
+    right: 22%;
+    top:6.5%;
+}
+.clock ul li:nth-child(2){
+    right: 6%;
+    top:25%;
+}
+.clock ul li:nth-child(3){
+    right: 1%;
+    top:calc(50% - 10px);
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.clock ul li:nth-child(4){
+    right: 6%;
+    top:69%;
+}
+.clock ul li:nth-child(5){
+    right: 22%;
+    top:84%;
+}
+.clock ul li:nth-child(6){
+    right: calc(50% - 10px);
+    top:calc(99% - 20px);
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.clock ul li:nth-child(7){
+    left: 22%;
+    top:84%;
+}
+.clock ul li:nth-child(8){
+    left: 6%;
+    top:69%;
+}
+.clock ul li:nth-child(9){
+    left: 1%;
+    top:calc(50% - 10px);
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.clock ul li:nth-child(10){
+    left: 6%;
+    top:25%;
+}
+.clock ul li:nth-child(11){
+    left: 22%;
+    top:6.5%;
+}
+.clock ul li:nth-child(12){
+    right: calc(50% - 10px);
+    top:1%;
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#log {
+  display: none;
+}
+
+.boximage {
+  width: 100%;
+}
+
+
+#nameInput {
+  z-index: 10;
+}
+
+#feelingInput {
+  z-index: 10;
 }

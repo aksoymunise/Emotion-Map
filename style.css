@@ -159,14 +159,14 @@ input {
 }
 
 .clock{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background-color: pink;
-    margin: 100px auto 0px auto;
-    position: relative;
-    border:20px solid cornsilk;
-
+    background-color: white;
+    position: absolute;
+    border:5px solid black;
+  top: 20px;
+  right: 30px;
 }
 .center{
     background-color: #000;
